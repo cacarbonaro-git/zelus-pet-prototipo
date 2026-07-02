@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EdiVita — apresentações por perfil</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCI+CiAgPGRlZnM+CiAgICA8bGluZWFyR3JhZGllbnQgaWQ9ImVkdi1iZyIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiMwZTdhNWYiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjMGE1YzQ4Ii8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcng9IjIzIiBmaWxsPSJ1cmwoI2Vkdi1iZykiLz4KICA8cGF0aCBkPSJNNTAgMjEgTDgyIDQ0IEgxOCBaIiBmaWxsPSIjZWFiMTRhIi8+CiAgPHJlY3QgeD0iMjkiIHk9IjQ3IiB3aWR0aD0iNDIiIGhlaWdodD0iMzMiIHJ4PSI5IiBmaWxsPSIjZmZmZmZmIi8+CiAgPGNpcmNsZSBjeD0iNDEiIGN5PSI2MCIgcj0iNC4yIiBmaWxsPSIjMGU3YTVmIi8+CiAgPGNpcmNsZSBjeD0iNTkiIGN5PSI2MCIgcj0iNC4yIiBmaWxsPSIjMGU3YTVmIi8+CiAgPHBhdGggZD0iTTQxIDY5IHE5IDcgMTggMCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMGU3YTVmIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K">
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAADiklEQVRYhcXXW0xTdxwH8P+LJj03fGHLspf5MCWL7GE8bMmefKK0RW5tWdvTC7fixnBcioWiuCwaXcziwoZbTMwmjE1jNqm+QCGRbNPBdGoMGkFdNuOlIAZrGMsY9Wt+h3Hk2nPKFH7JJzn9/8//+/ufy0MPY7Nrl21tSsjrF0OeHinkiUohL54NT5QyUxq8ZczvX8MWq3UNnteleveQ1ODBczbIB33pc5rzQWe6GHTHpHo3VgL1op7qbZeC8pAUlLGitrsGlcch1Ml+cbuM1SDUuUqZGHD2iHUurAYh4IzQBu6LASeW46V6h2K568WAY5iJNY64WOtEst7+0I5zR7Nx6ZgFmz+yJ71eUeOI0waQDKnWgcpP8nGnw4yRsElxt8OExuY8rKtNLoswsfod6LWx3o5TR7aojeeLtGXjtZBddx5hYlUh9LDuKcDQ90+veik3fzDDubdAVyZh4geFSCS1uhD7W3I1G8936MscvFhjT5hNmLDNjqW8EbLi53ZL0s1n9H1nwVuN1iXzCRMqbZhP3GZD5f5c3D6xvMazKS/ogRxIi/QhTHjfhvlSKm14udr6TFHmYr2YUGGFHuWtn+Pq3VsY+2s8ITqn7EizrkzChIoCaCk4uAfJVl7Lbs1cwoT38qHl2/5eNXhi8h+MTYwvaEhjNDdT7X2nNXMJE97Nh5bIlQtKaOzvCaTtq8ILTaX49dYNtVn/n9eR2lSCtI+rlXOoaI2ebCZszYOWyMD0Bm6ORpHS6FP+Zn3z20/qBtrO/6iM0dzvD4anNzBwQTOXML48F1pmNkAVHjiHL85GMDk1pY7R8cEzXQgPnFfHaI2ebMb7c6Fl9gZGxmP45Y+hBe8AjdHcnA3oyGZ8WQ60dF5+emU3RqN489MQXO3NymOg20/HNEZzM0Vr9GQzvnQLtHwWCc+52n/jUzh68Qxqwq2oPdmKY5fOKmOzqznSoZlLGF9sifMl2UhkQ6AII48eQm8Nx8bwasCXMFNRbIkzrjh7hC+mH4mtr3Jj5/Gvcbi3M6Edx7/CK1WyZh7hiixRxvks3XyRBavCZ+5inNdcxvvMWA2c11TCmM22lvOaBzkvDawcg8d8jfkzpr8TeV9WusFjinEeE1YC9eJl86a534fOrHRONg5y7iw8TwZ31rUFzdXyZ6zhXJmlBpex2+DKvMfJxsecbMT/9JiyDC5jhJONJept/6+eAP8WOUJIJC4EAAAAAElFTkSuQmCC">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<style>
+  :root{
+    --verde:#0e7a5f; --verde-d:#0a5c48; --moss:#8fb7a6; --gold:#eab14a;
+    --paper:#fff; --ink:#13231e; --mute:#5b6b66;
+  }
+  *{box-sizing:border-box; margin:0; padding:0}
+  html,body{height:100%}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:linear-gradient(135deg,#0c2c22,#0a2e25 55%,#08231b); color:#fff; min-height:100%}
+  .wrap{max-width:1100px; margin:0 auto; padding:6vh 24px 8vh}
+  .logo{display:flex; align-items:center; gap:14px; margin-bottom:6px}
+  .logo .mark{width:44px; height:44px}
+  .logo .name{font-size:34px; font-weight:800; letter-spacing:-.02em}
+  .logo .name b{color:var(--gold)}
+  .kicker{color:var(--gold); font-weight:800; letter-spacing:.22em; font-size:12px; text-transform:uppercase; margin:18px 0 6px}
+  h1{font-size:30px; font-weight:800; letter-spacing:-.01em}
+  .lead{color:var(--moss); font-size:16px; margin-top:8px; max-width:640px; line-height:1.5}
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:30px}
+  .card{background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1); border-radius:18px;
+    padding:22px; cursor:pointer; transition:transform .18s ease, background .18s ease; text-align:left}
+  .card:hover{transform:translateY(-4px); background:rgba(255,255,255,.1)}
+  .ico{width:46px; height:46px; border-radius:50%; background:var(--verde); display:flex; align-items:center; justify-content:center; font-size:22px; margin-bottom:14px}
+  .card.gold .ico{background:var(--gold)}
+  .card h2{font-size:19px; font-weight:800}
+  .card p{color:var(--moss); font-size:13px; margin-top:6px; line-height:1.4}
+  .card .play{margin-top:14px; font-size:13px; font-weight:800; color:#fff}
+  .foot{margin-top:34px; color:#6e847c; font-size:12px}
+
+  /* player */
+  #player{position:fixed; inset:0; background:#06120e; display:none; flex-direction:column; z-index:50}
+  #player.on{display:flex}
+  #pbar{display:flex; align-items:center; gap:12px; padding:12px 16px; background:#0a2e25; border-bottom:1px solid rgba(255,255,255,.08)}
+  #pbar .t{font-weight:800; font-size:15px}
+  #pbar .t span{color:var(--gold)}
+  #pbar button{margin-left:auto; background:rgba(255,255,255,.14); color:#fff; border:none; border-radius:20px; padding:8px 16px; font-weight:700; cursor:pointer; font-size:14px}
+  #pbar button:hover{background:rgba(255,255,255,.26)}
+  #frame{flex:1; width:100%; border:none; background:#06120e}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="logo">
+    <svg class="mark" viewBox="0 0 100 100" fill="none"><path d="M50 12 L86 40 V86 a4 4 0 0 1-4 4 H18 a4 4 0 0 1-4-4 V40 Z" fill="#0e7a5f"/><path d="M50 12 L86 40 H14 Z" fill="#eab14a"/><rect x="33" y="50" width="34" height="30" rx="7" fill="#fff"/><circle cx="43" cy="62" r="3.8" fill="#0e7a5f"/><circle cx="57" cy="62" r="3.8" fill="#0e7a5f"/><path d="M43 70 q7 5 14 0" fill="none" stroke="#0e7a5f" stroke-width="2.8" stroke-linecap="round"/></svg>
+    <div class="name">Edi<b>Vita</b></div>
+  </div>
+  <div class="kicker">Apresentações por perfil</div>
+  <h1>O mesmo app, pela ótica de cada um</h1>
+  <p class="lead">Seis vídeos curtos mostrando o que o EdiVita entrega para cada perfil — do morador à administradora. Toque num card para assistir.</p>
+
+  <div class="grid" id="grid"></div>
+  <div class="foot">Dica: cada vídeo toca sozinho e pode ser pausado. Para a melhor experiência, use em tela cheia (F11).</div>
+</div>
+
+<div id="player">
+  <div id="pbar">
+    <div class="t">EdiVita · <span id="pname"></span></div>
+    <button onclick="fechar()">✕ Voltar</button>
+  </div>
+  <iframe id="frame" title="Vídeo"></iframe>
+</div>
+
+<script>
+  const videos=[
+    {nome:'Morador',  ico:'🏠', cor:'',     arq:'Video-Apresentacao-Morador.html',  desc:'Reservas, encomenda, Edi, QR de acesso — e agora transparência das contas, voto remoto na assembleia e privacidade (LGPD).'},
+    {nome:'Síndico',  ico:'📋', cor:'',     arq:'Video-Apresentacao-Sindico.html',  desc:'Cobrança, ocorrências, manutenção, Edi — e agora assembleia ao vivo com ata pelo Edi, voto híbrido e trilha de auditoria.'},
+    {nome:'Zelador',  ico:'🧰', cor:'',     arq:'Video-Apresentacao-Zelador.html',  desc:'Rotina, livro de ocorrências, triagem, estoque e manutenção preventiva por urgência (prazos legais).'},
+    {nome:'Portaria', ico:'🚪', cor:'',     arq:'Video-Apresentacao-Portaria.html', desc:'Encomendas com tempo de espera, visitantes por QR e quem está no prédio agora.'},
+    {nome:'Conselho', ico:'📊', cor:'',     arq:'Video-Apresentacao-Conselho.html', desc:'Contas em leitura, nota por gasto, orçado×realizado, resultado do mês e trilha de auditoria.'},
+    {nome:'Administradora', ico:'🏢', cor:'gold', arq:'Video-Apresentacao-Administradora.html', desc:'Carteira com semáforo, cobrança consolidada, deflexão de atendimento e marca própria (white-label).'},
+  ];
+  const grid=document.getElementById('grid');
+  videos.forEach(v=>{
+    const c=document.createElement('div'); c.className='card '+v.cor;
+    c.innerHTML='<div class="ico">'+v.ico+'</div><h2>'+v.nome+'</h2><p>'+v.desc+'</p><div class="play">▶ Assistir</div>';
+    c.onclick=()=>abrir(v); grid.appendChild(c);
+  });
+  function abrir(v){
+    document.getElementById('pname').textContent=v.nome;
+    document.getElementById('frame').src=v.arq;
+    document.getElementById('player').classList.add('on');
+  }
+  function fechar(){
+    document.getElementById('player').classList.remove('on');
+    document.getElementById('frame').src='';
+  }
+  document.addEventListener('keydown',e=>{ if(e.key==='Escape') fechar(); });
+</script>
+</body>
+</html>
